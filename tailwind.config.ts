@@ -107,8 +107,8 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'gradient-primary': 'linear-gradient(135deg, hsl(270, 70%, 65%), hsl(330, 80%, 60%))',
-				'gradient-accent': 'linear-gradient(135deg, hsl(330, 80%, 60%), hsl(25, 95%, 60%))'
+				'gradient-primary': 'linear-gradient(135deg, hsl(0, 0%, 10%), hsl(0, 0%, 30%))',
+				'gradient-accent': 'linear-gradient(135deg, hsl(0, 0%, 20%), hsl(0, 0%, 40%))'
 			}
 		}
 	},

@@ -82,11 +82,11 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex h-20 items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center text-white font-bold text-xl">
-                K
+              <div className="w-12 h-12 rounded-xl bg-foreground flex items-center justify-center text-white font-bold text-xl">
+                А
               </div>
-              <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                КухниПро
+              <span className="text-2xl font-bold text-foreground">
+                АРТИО
               </span>
             </div>
 
@@ -121,44 +121,52 @@ const Index = () => {
         </div>
       </header>
 
-      <section id="promo" className="relative overflow-hidden py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
+      <section
+        id="promo"
+        className="relative overflow-hidden py-20 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/9c2e0eef-4d5e-4b03-b636-bd33fee2e373.jpg')`,
+        }}
+      >
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <Card className="border-2 border-primary/20 shadow-2xl bg-white/90 backdrop-blur">
-              <CardContent className="p-8 md:p-12">
-                <div className="flex flex-col md:flex-row items-center gap-8">
-                  <div className="flex-1 space-y-4">
-                    <div className="inline-block px-4 py-2 bg-accent text-white rounded-full text-sm font-semibold animate-fade-in">
-                      🔥 Акция до 31 октября
-                    </div>
-                    <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                      Кухня вашей мечты <span className="bg-gradient-primary bg-clip-text text-transparent">со скидкой 25%</span>
-                    </h1>
-                    <p className="text-lg text-muted-foreground">
-                      Бесплатный замер, дизайн-проект в подарок и установка за 3 недели
-                    </p>
-                    <div className="flex flex-wrap gap-4 pt-4">
-                      <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-white font-semibold">
-                        Рассчитать стоимость
-                        <Icon name="ArrowRight" size={20} className="ml-2" />
-                      </Button>
-                      <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
-                        <Icon name="Phone" size={20} className="mr-2" />
-                        Позвонить
-                      </Button>
-                    </div>
+            <div className="p-8 md:p-12">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-1 space-y-4 text-white">
+                  <div className="inline-block px-4 py-2 bg-white text-foreground rounded-full text-sm font-semibold animate-fade-in">
+                    🔥 Акция до 31 октября
                   </div>
-                  <div className="w-full md:w-auto">
-                    <div className="w-64 h-64 rounded-2xl bg-gradient-accent animate-gradient bg-[length:200%_200%] flex items-center justify-center">
-                      <div className="text-center text-white">
-                        <div className="text-6xl font-bold">-25%</div>
-                        <div className="text-xl font-semibold mt-2">на все кухни</div>
-                      </div>
+                  <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+                    Кухня вашей мечты <span className="text-white/90">со скидкой 25%</span>
+                  </h1>
+                  <p className="text-lg text-white/80">
+                    Бесплатный замер, дизайн-проект в подарок и установка за 3 недели
+                  </p>
+                  <div className="flex flex-wrap gap-4 pt-4">
+                    <Button size="lg" className="bg-white text-foreground hover:bg-white/90 font-semibold">
+                      Рассчитать стоимость
+                      <Icon name="ArrowRight" size={20} className="ml-2" />
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-white text-white hover:bg-white hover:text-foreground"
+                    >
+                      <Icon name="Phone" size={20} className="mr-2" />
+                      Позвонить
+                    </Button>
+                  </div>
+                </div>
+                <div className="w-full md:w-auto">
+                  <div className="w-64 h-64 rounded-2xl bg-white/10 backdrop-blur-md border-2 border-white/30 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <div className="text-6xl font-bold">-25%</div>
+                      <div className="text-xl font-semibold mt-2">на все кухни</div>
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -302,6 +310,130 @@ const Index = () => {
         </div>
       </section>
 
+      <section id="benefits" className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4">Почему на заказ лучше готового</h2>
+              <p className="text-lg text-muted-foreground">
+                Индивидуальный подход и качество, которое прослужит десятилетия
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <Card className="border-2 hover:border-primary/50 transition-all hover:shadow-lg">
+                <CardHeader>
+                  <div className="w-14 h-14 rounded-xl bg-foreground flex items-center justify-center mb-4">
+                    <Icon name="Ruler" size={28} className="text-white" />
+                  </div>
+                  <CardTitle className="text-xl">Точные размеры</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Кухня изготавливается под ваше пространство с учетом каждого сантиметра. Никаких зазоров и
+                    несовпадений, в отличие от готовой мебели.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 hover:border-primary/50 transition-all hover:shadow-lg">
+                <CardHeader>
+                  <div className="w-14 h-14 rounded-xl bg-foreground flex items-center justify-center mb-4">
+                    <Icon name="Palette" size={28} className="text-white" />
+                  </div>
+                  <CardTitle className="text-xl">Любой дизайн</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Выбирайте из сотен материалов, цветов и фурнитуры. Создайте кухню, которая идеально впишется в
+                    ваш интерьер, а не наоборот.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 hover:border-primary/50 transition-all hover:shadow-lg">
+                <CardHeader>
+                  <div className="w-14 h-14 rounded-xl bg-foreground flex items-center justify-center mb-4">
+                    <Icon name="Gem" size={28} className="text-white" />
+                  </div>
+                  <CardTitle className="text-xl">Премиум качество</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Используем только проверенные материалы и фурнитуру европейских производителей. Гарантия до 10
+                    лет на всю конструкцию.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 hover:border-primary/50 transition-all hover:shadow-lg">
+                <CardHeader>
+                  <div className="w-14 h-14 rounded-xl bg-foreground flex items-center justify-center mb-4">
+                    <Icon name="Settings" size={28} className="text-white" />
+                  </div>
+                  <CardTitle className="text-xl">Функциональность</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Продуманная эргономика и расположение систем хранения под ваши потребности. Каждый ящик и полка
+                    на своем месте.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 hover:border-primary/50 transition-all hover:shadow-lg">
+                <CardHeader>
+                  <div className="w-14 h-14 rounded-xl bg-foreground flex items-center justify-center mb-4">
+                    <Icon name="Zap" size={28} className="text-white" />
+                  </div>
+                  <CardTitle className="text-xl">Быстрое производство</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Изготовление и установка за 3-4 недели. Собственное производство позволяет контролировать все
+                    этапы и соблюдать сроки.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 hover:border-primary/50 transition-all hover:shadow-lg">
+                <CardHeader>
+                  <div className="w-14 h-14 rounded-xl bg-foreground flex items-center justify-center mb-4">
+                    <Icon name="TrendingDown" size={28} className="text-white" />
+                  </div>
+                  <CardTitle className="text-xl">Выгодная цена</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Цены ниже готовых аналогов при значительно более высоком качестве. Работаем без посредников
+                    напрямую от производства.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="mt-12 text-center">
+              <Card className="inline-block bg-foreground text-white border-0">
+                <CardContent className="p-8">
+                  <div className="flex flex-col md:flex-row items-center gap-6">
+                    <div className="text-left flex-1">
+                      <h3 className="text-2xl font-bold mb-2">Получите бесплатную консультацию</h3>
+                      <p className="text-white/80">
+                        Наш специалист поможет выбрать оптимальное решение для вашей кухни
+                      </p>
+                    </div>
+                    <Button size="lg" className="bg-white text-foreground hover:bg-white/90 font-semibold">
+                      Заказать звонок
+                      <Icon name="Phone" size={20} className="ml-2" />
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="reviews" className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -390,13 +522,13 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center font-bold">
-                  K
+                <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center font-bold text-foreground">
+                  А
                 </div>
-                <span className="text-xl font-bold">КухниПро</span>
+                <span className="text-xl font-bold">АРТИО</span>
               </div>
               <p className="text-sm text-white/60">
-                Производство кухонь на заказ с 2013 года
+                Производство кухонь на заказ с 2010 года
               </p>
             </div>
 
@@ -419,7 +551,7 @@ const Index = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <Icon name="Mail" size={16} />
-                  info@kuhnipro.ru
+                  info@artio.ru
                 </li>
                 <li className="flex items-center gap-2">
                   <Icon name="MapPin" size={16} />
@@ -447,7 +579,7 @@ const Index = () => {
           </div>
 
           <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-white/40">
-            © 2024 КухниПро. Все права защищены.
+            © 2024 АРТИО. Все права защищены.
           </div>
         </div>
       </footer>
